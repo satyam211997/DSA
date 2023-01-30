@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          
+</body>
+</html>
+<script>
+          //algo
+
+          // let arr= [1,2,[3,4,[4,6],5],6,7]
+          // let fl= arr.flat(Infinity)
+          // console.log(fl)    
+
+          let sum=0
+           function add(input){
+                    for (let index = 0; index < input.length; index++) {
+                              const element = input[index];
+                              if(!Array.isArray(input[index])){
+                                        if (typeof(input[index])==="number")
+                                        sum+=input[index]
+                              }
+                              else if(Array.isArray(input[index])){
+                                        add(input[index])
+                              }
+                              
+                    }
+            return sum        
+           }
+           console.log(add([1,2,"sat",[4,5]]))
+          
+</script>
